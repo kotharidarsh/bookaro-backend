@@ -13,7 +13,7 @@ from fastapi.openapi.docs import (
 from app.core.config import settings
 from app.api.utils.exception_handler import register_handlers
 from app.api.api_v1.endpoints.health import health_api
-# from app.api.api_v1.api import api_router
+from app.api.api_v1.api import api_router
 # import app.setup.initial_data as initialize
 
 app = FastAPI(
@@ -59,7 +59,7 @@ async def shutdown():
 
 
 # mounting endpoints
-# app.include_router(api_router, prefix=settings.API_VERSION_STR)
+app.include_router(api_router, prefix=settings.API_VERSION_STR)
 app.mount(path="/health", app=health_api)
 
 app.mount(
