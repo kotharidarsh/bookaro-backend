@@ -1,0 +1,28 @@
+version: 1
+formatters:
+  simple:
+    format: '[%(asctime)s] [%(name)s] [0001] [BOOKARO_BACKEND] [%(levelname)s]: %(message)s'
+  detail:
+    format: '[%(asctime)s] [%(levelname)s] [0001] [BOOKARO_BACKEND] [File: %(filename)s] [Func: %(funcName)s()] [Line: %(lineno)d]:  %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: detail
+    stream: ext://sys.stdout
+#  all:
+#    class: logging.handlers.TimedRotatingFileHandler
+#    level: INFO
+#    formatter: detail
+#    when: W0
+#    backupCount: 4
+#    filename: "logs/bookaro.log"
+#loggers:
+#  sampleLogger:
+#    level: DEBUG
+#    handlers: [console]
+#    propagate: no
+root:
+  level: INFO
+  handlers: [console]
+  propagate: true
