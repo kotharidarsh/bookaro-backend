@@ -3,7 +3,7 @@
 Setup Steps:
 1. Create a Python virtualenv and install dependencies from requirements.txt
 pip install -r requirements.txt
-2. You will need to setup elasticsearch, rabbitmq and redis locally
+2. You will need to setup mysql, rabbitmq and redis locally
 3. Open Terminal and navigate to backend/app and edit the .env files accordingly
 4. Open Terminal and navigate to backend/app folder
 5. Execute the following command: 
